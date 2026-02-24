@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codeagent"
+version = "0.1.0"
+description = "CLI-based AI coding assistant supporting Claude and OpenAI"
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.39.0",
+    "openai>=1.50.0",
+    "rich>=13.7.0",
+    "click>=8.1.0",
+    "python-dotenv>=1.0.0",
+    "prompt-toolkit>=3.0.0",
+]
+
+[project.scripts]
+codeagent = "codeagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["codeagent*"]
